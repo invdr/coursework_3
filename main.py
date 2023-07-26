@@ -10,6 +10,6 @@ for line in normal_list:
     if transaction_description == "Открытие вклада":
         print(encoding_to(line))
     else:
-        print(encoding_from(line), '->', encoding_from(line))
-    print(get_ammount(line))
+        print(encoding_to(line), '->', encoding_from(line))
+    print(get_amount(line))
     print()
