@@ -1,5 +1,7 @@
+import os
 from config.utils import *
-from config.config import *
+
+PATH = os.path.join('config', 'operations.json')
 
 original_list = load_file(PATH)
 sorted_list = get_sorted_list(original_list)
