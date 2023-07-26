@@ -2,7 +2,7 @@ import json
 from datetime import date
 
 
-def load_file(filename):
+def load_file(filename) -> list:
     """Функция возвращает список транзакций из json-файла."""
     with open(filename, encoding='utf8') as f:
         data = json.load(f)
@@ -67,5 +67,5 @@ def encoding_to(transaction: dict) -> str:
 def get_amount(transaction: dict) -> str:
     """Функция возвращает сумму и валюту транзакции."""
     amount = f'{transaction["operationAmount"]["amount"]} ' \
-             f'{transaction["operationAmount"]["currency"]["name"]} '
+             f'{transaction["operationAmount"]["currency"]["name"]}'
     return amount
